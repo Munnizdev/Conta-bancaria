@@ -12,46 +12,47 @@ export function main() {
 
   console.log("\nCriar Contas\n");
 
-  let cc1: ContaCorrente = new ContaCorrente(contas.gerarNumero(), 123, 1, "João da Silva", 1000, 100.0);
+  let cc1: ContaCorrente = new ContaCorrente(contas.gerarNumero(), 123, 1, "Andressa Muniz", 1000, 100.0);
   contas.cadastrar(cc1);
 
-  let cc2: ContaCorrente = new ContaCorrente(contas.gerarNumero(), 124, 1, "Maria da Silva", 2000, 100.0);
+  let cc2: ContaCorrente = new ContaCorrente(contas.gerarNumero(), 124, 1, "Romenia Amaro", 2000, 100.0);
   contas.cadastrar(cc2);
 
-  let cp1: ContaPoupanca = new ContaPoupanca(contas.gerarNumero(), 125, 2, "Mariana dos Santos", 4000, 12);
+  let cp1: ContaPoupanca = new ContaPoupanca(contas.gerarNumero(), 125, 2, "Roberta Santos", 4000, 12);
   contas.cadastrar(cp1);
 
-  let cp2: ContaPoupanca = new ContaPoupanca(contas.gerarNumero(), 125, 2, "Juliana Ramos", 8000, 15);
+  let cp2: ContaPoupanca = new ContaPoupanca(contas.gerarNumero(), 125, 2, "Camila Silva", 8000, 15);
   contas.cadastrar(cp2);
 
   contas.listarTodas();
 
   while (true) {
-    console.log(colors.fg.green, '');
-    console.log('*****************************************************');
-    console.log('                                                     ');
-    console.log('                BANCO DO BRAZIL COM Z                ');
-    console.log('                                                     ');
-    console.log('*****************************************************');
-    console.log('                                                     ');
-    console.log('            1 - Criar Conta                          ');
-    console.log('            2 - Listar todas as Contas               ');
-    console.log('            3 - Buscar Conta por Numero              ');
-    console.log('            4 - Atualizar Dados da Conta             ');
-    console.log('            5 - Apagar Conta                         ');
-    console.log('            6 - Sacar                                ');
-    console.log('            7 - Depositar                            ');
-    console.log('            8 - Transferir valores entre Contas      ');
-    console.log('            9 - Sair                                 ');
-    console.log('                                                     ');
-    console.log('*****************************************************');
-    console.log('                                                     ');
+  console.log(colors.fg.yellow);
+console.log('*****************************************************');
+console.log('                                                     ');
+console.log('                BANCO DO BRAZIL COM                  ');
+console.log('                                                     ');
+console.log('*****************************************************');
+console.log('                                                     ');
+console.log('            1 - Criar Conta                          ');
+console.log('            2 - Listar todas as Contas               ');
+console.log('            3 - Buscar Conta por Numero              ');
+console.log('            4 - Atualizar Dados da Conta             ');
+console.log('            5 - Apagar Conta                         ');
+console.log('            6 - Sacar                                ');
+console.log('            7 - Depositar                            ');
+console.log('            8 - Transferir valores entre Contas      ');
+console.log('            9 - Sair                                 ');
+console.log('                                                     ');
+console.log('*****************************************************');
+console.log('                                                     ');
+console.log(colors.reset); // ← aqui volta à cor normal
 
-    console.log('Entre com a opção desejada:', colors.reset);
-    opcao = readlinesync.questionInt('');
+console.log('Entre com a opção desejada:');
+opcao = readlinesync.questionInt('');
 
     if (opcao === 9) {
-      console.log('\nBanco do Brazil com Z - O seu futuro começa aqui!');
+      console.log('\nBanco do Brazil - O seu futuro começa aqui!');
       sobre();
       process.exit(0);
     }
@@ -206,9 +207,7 @@ export function main() {
 
 function sobre(): void {
   console.log('\n*****************************************************');
-  console.log('Projeto Desenvolvido por: ');
-  console.log('Generation Brasil - generation@generation.org');
-  console.log('github.com/conteudoGeneration');
+  console.log('Projeto Desenvolvido por: Andressa Muniz ');
   console.log('*****************************************************');
 }
 
